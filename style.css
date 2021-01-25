@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+body {
+    font-family: 'Poppins';
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: #0e2a47;
+}
+.app-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+.cash-app-title {
+    font-weight: 600;
+    padding-left: 33px;
+    font-size: 19px;
+}
+
+.cash-app-title:before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-image: url('./assets/Images/cashapp.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: 20px;
+}
+
+.circle-wrap {
+    position: absolute;
+    background: #ffffff;
+    box-shadow: -5px 4px 22px rgba(204, 204, 204, 0.25);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -80px;
+    left: calc(50% - 85px);
+    animation: zoomIn 0.4s 1;
+    /* transform: translate(-50%); */
+    /* margin-left: -50%; */
+}
+
+.rectangle-wrap {
+    padding-top: 130px;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    min-width: 350px;
+    animation: slideBtT 0.2s 1;
+}
+
+.banner {
+    background: #f7f7f777;
+    border: 1px solid #d0d0d083;
+    padding: 20px 0;
+    line-height: 1;
+    animation: slideBtT 0.5s 1;
+}
+
+.main-text {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.content {
+    float: left;
+    width: 100%;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 50px 0 50px 0;
+    animation: slideBtT 0.7s 1;
+}
+
+.main-button {
+    width: 70%;
+    float: left;
+    margin: 0 15%;
+    border: 1px solid #c1c1c185;
+    position: relative;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 40px;
+    animation: slideBtT 0.9s 1;
+    transition: box-shadow 0.4s;
+    box-shadow: -5px 4px 22px rgba(204, 204, 204, 0.55);
+}
+
+.main-button:hover {
+    box-shadow: 5px 4px 22px rgba(204, 204, 204, 0.25);
+}
+
+.main-button .cash-app-title {
+    font-size: 35px;
+    padding-left: 60px;
+    font-weight: 800;
+}
+
+.main-button .cash-app-title:before {
+    width: 50px;
+    height: 50px;
+    top: 22px;
+}
+
+.footer p {
+    animation: slideBtT 1s 1;
+}
+
+.logos-wrap {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px 5px 30px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+.arrow-bottom {
+    position: relative;
+}
+
+.arrow-bottom:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('./assets/Images/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* right: 0; */
+    margin-left: 10px;
+    margin-top: 5px;
+    transform: rotate(-100deg) scaleX(-1);
+}
+
+.logos-wrap img {
+    /* width: 80px; */
+    animation: slideRtL 0.4s 1;
+}
+
+.animation-flow:nth-child(1) {
+    animation-duration: 0.4s;
+}
+.animation-flow:nth-child(2) {
+    animation-duration: 0.6s;
+}
+
+.animation-flow:nth-child(3) {
+    animation-duration: 0.8s;
+}
+
+.animation-flow:nth-child(4) {
+    animation-duration: 1s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideBtT {
+    from {
+        transform: translate(0, 30px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRtL {
+    from {
+        transform: translate(30px, 0px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0px);
+        opacity: 1;
+    }
+}
